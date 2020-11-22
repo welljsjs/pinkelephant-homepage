@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-6b15f824b0b0a4997e4a.js"
+    "url": "webpack-runtime-57486c55e7882c166e2a.js"
   },
   {
     "url": "framework-de237a875aa45b276a9d.js"
   },
   {
-    "url": "app-455e789993eb71051f53.js"
+    "url": "app-6b1ddb391026d89b55ad.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "5cba457b3811b8ff99c25c2dd2202c66"
+    "revision": "676439b6d2781f3b082b5db81e49f421"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-b0556ce5127c1a3e2490.js"
@@ -48,14 +48,14 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "55be67af32d7bda05a8ec1c218b91799"
+    "revision": "606f2ca7bc69754f79fc1d3ce76f1037"
   },
   {
     "url": "polyfill-f33cc994945b2249d5ee.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "0fabbc5c851f2a7bfc3fcb09f4a2fc9f"
+    "revision": "baea84e7d9ed6178fcfb5f421f172bfe"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -142,12 +142,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/the-pink-elephant-homepage`), ``)
+  pathname = pathname.replace(new RegExp(`^/pinkelephant-homepage`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/the-pink-elephant-homepage/app-455e789993eb71051f53.js`))) {
+  if (!resources || !(await caches.match(`/pinkelephant-homepage/app-6b1ddb391026d89b55ad.js`))) {
     return await fetch(event.request)
   }
 
@@ -160,7 +160,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/the-pink-elephant-homepage/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/pinkelephant-homepage/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
