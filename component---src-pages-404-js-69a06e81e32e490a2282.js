@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkthe_pink_elephant=self.webpackChunkthe_pink_elephant||[]).push([[8883],{429:function(e,n,t){t.r(n);var o=t(7294),r=t(8680),s=[{href:"/components/markdown",text:"Markdown"},{href:"/components/Aside",text:"Aside"},{href:"/components/demo",text:"Demo"}];n.default=function(){return o.createElement(r.e9,{links:s})}}}]);
+//# sourceMappingURL=component---src-pages-404-js-69a06e81e32e490a2282.js.map
