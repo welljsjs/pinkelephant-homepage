@@ -1,0 +1,149 @@
+---
+title: TUT-MIK-I – Mathematische Grundlagen
+description: Zusatz zum 1. Tutorium, Kurze Wiederholung Differentialrechnung (Ableitungen), Relation, Unterschied zur Funktion
+---
+
+# TUT-MIK-I – Mathematische Grundlagen
+
+# Zusatz zum 1. Tutorium
+
+$$
+a^{n-m}=\frac{a^n}{a^m} \\
+\implies a^{-1}=a^{0-1}=\frac{a^0}{a^1}=\frac{1}{a}
+$$
+
+$$
+\sqrt[n]{x^m}=x^{m/n} \\
+\implies \sqrt{x}=x^{1/2} \implies x^{-1/2}=\sqrt{x^{-1}}
+$$
+
+# Kurze Wiederholung: Differentialrechnung (Ableitungen)
+
+(Varian S. 845 ff., 9. Auflage)
+
+## Relation
+
+Eine Relation ist eine Beziehung zwischen Mengen. Gewöhnlich wird unter Relation eine binäre Relation verstanden, d.h. eine Relation über _zwei_ Mengen $A$ und $B$.
+
+Elemente dieser (binären) Relation sind dann 2-Tupel, d.h. ein geordnetes Paar $(a,b)$, wobei $a$ aus der Menge $A$ und $b$ aus der Menge $B$ stammt.
+
+Die Mengen $A$ und $B$ können auch identisch sein (die gleichen Elemente beinhalten). Dies wird besonders für die folgenden Tutorien und die sog. Präferenzrelationen bzw. Ordnungsrelationen relevant.
+
+Mathematisch ist eine Relation eine Teilmenge des kartesischen Produktes der beiden Mengen:
+
+$$
+R \subseteq A \times B.
+$$
+
+$A$ wird bei (binären) Relationen als Quellmenge, $B$ als Zielmenge bezeichnet.
+
+## Unterschied zur Funktion
+
+Jede Funktion ist eine Relation. Umgekehrt ist nicht jede Relation eine Funktion.
+
+Denn eine Funktion ist eine binäre Relation, bei der jedem Element aus der Quellmenge $A$ _genau ein_ Element aus der Zielmenge $B$ zugewiesen sein muss, bspw. $y: \mathbb{R} \to \mathbb{R}, x \to x^2$.
+
+Eine Funktion hat also immer einen Input und einen Output.
+
+Eine Relation muss nicht zu jedem Input einen Output haben und ein Input kann mehrere Outputs haben (bspw. bei der Ordnungsrelation $\geq$ ist sowohl $5 \ge 3$ als bspw. auch $5 \ge 1$).
+
+## Veränderung
+
+Die Notation $\Delta x$ wird als “Veränderung von $x$” gelesen (nicht $\Delta$ mal x).
+
+Ändert sich $x$ von einem Wert $x^{*}$ zu einem Wert $x^{**}$, dann ist die Veränderung von $x$:
+
+$$
+\Delta x=x^{**}-x^{*}.
+$$
+
+(neuer Wert minus alter Wert).
+
+$\Delta$ bezieht sich üblicherweise auf kleine, aber messbare Änderungen.
+
+## Änderungsrate und Steigung
+
+Die Änderungsrate ist das Verhältnis zweier Veränderungen.
+
+Ist eine Funktion $y=f(x)$ gegeben, dann wird mit Änderungsrate von $y$ in Bezug auf $x$ Folgendes bezeichnet:
+
+$$
+\frac{\Delta y}{\Delta x}=\frac{f(x+\Delta x)-f(x)}{\Delta x}.
+$$
+
+Wie stark ändert sich $y$ im Verhältnis zur Änderung von $x$.
+
+Am Beispiel einer linearen Funktion können wir so zeigen, dass die Steigung einer linearen Funktion immer konstant ist:
+
+$$
+\frac{\Delta y}{\Delta x}=\frac{m*(x+\Delta x)+b-m*(x)-b}{\Delta x}=\frac{m*\Delta x}{\Delta x}=m.
+$$
+
+$m$ entspricht dann der Steigung der Funktion.
+
+## Ableitung
+
+Die Ableitung einer Funktion $y=f(x)$ ist definiert als:
+
+$$
+\frac{df(x)}{dx}=\lim_{\Delta x \to 0}\frac{f(x+\Delta x)-f(x)}{\Delta x}.
+$$
+
+Also ist die Ableitung die Änderungsrate von $y$ in Bezug auf $x$, wenn die Veränderung von $x$ gegen null strebt (quasi die Änderungsrate “in einem Punkt”).
+
+Das $d$ steht hier für eine sog. infinitesimale Änderung.
+
+## Partielle Ableitung
+
+Falls wir eine Funktion mit mehreren Funktionsargumenten haben, hängt also $y$ von bspw. $x_1$ und $x_2$ ab, sodass $y=f(x_1, x_2)$, dann ist die sog. partielle Ableitung von $f(x_1, x_2)$ nach $x_1$ durch
+
+$$
+\frac{\delta f(x_1, x_2)}{\delta x_1}=\lim_{\Delta x \to 0}{\frac{f(x_1+\Delta x_1, x_2)-f(x_1,x_2)}{\Delta x_1}}
+$$
+
+definiert.
+
+Die partielle Ableitung wird gebildet, indem die übrigen Funktionsargumente als Konstanten betrachtet werden.
+
+# Lösungen
+
+Beispiel Aufgabe Zusatz 1. Tutorium, a) mit $f(a,b)=2a^2+4b^3$:
+
+$$
+\frac{\delta f(a,b)}{\delta a}=4a
+$$
+
+$$
+\frac{\delta f(a,b)}{\delta b}=12b^2
+$$
+
+... Rest bitte selber rechnen.
+
+## Totale Ableitung bzw. totales Differential
+
+Das totale Differential $df$ einer Funktion $f$, die mehrere Funktionsargumente besitzt, ist durch
+
+$$
+df=\sum_{i=1}^{n}\frac{\delta f}{\delta x_i}dx_i
+$$
+
+definiert, also die Summe aller partiellen Differentiale.
+
+Das totale Differential gibt also an, wie stark sich die Funktion ändert, wenn sich eine der Variablen ändert.
+
+Beispiel Aufgabe Zusatz 2. Tutorium, a) mit $f(a,b)=2a^2+4b^3$:
+
+$$
+df=(4a)da+(12b^2)db.
+$$
+
+## Monoton fallend/steigend
+
+Eine Funktion $f:D \to \mathbb{R}$ mit $D \subseteq \mathbb{R}$ ist heißt
+
+- _monoton steigend_, falls $f(x) \le f(y)$ für alle $x,y \in D : x \le y$
+- _streng monoton steigend_, falls $f(x) \lt f(y)$ für alle $x,y \in D : x \lt y$
+- _monoton fallend_, falls $f(x) \ge f(y)$ für alle $x,y \in D : x \le y$
+- _streng_ _monoton fallend_, falls $f(x) \gt f(y)$ für alle $x,y \in D : x \lt y$
+
+<!-- [Mikroökonomie – Aufgabe T9 d](https://www.notion.so/Mikro-konomie-Aufgabe-T9-d-838bae4be2d249baa4c90ea979e3cb12)-->

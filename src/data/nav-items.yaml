@@ -30,6 +30,8 @@
       path: /guides/styling
     - title: v2.0 Migration
       path: /guides/v2-migration
+    - title: v3.0 Migration
+      path: /guides/v3-migration
 - title: Components
   pages:
     - title: Accordion
@@ -50,6 +52,10 @@
       path: /components/DoDontExample
     - title: DoDontRow
       path: /components/DoDontRow
+    - title: ExpressiveList
+      path: /components/ExpressiveList
+    - title: ExpressiveListContainer
+      path: /components/ExpressiveListContainer
     - title: FeatureCard
       path: /components/FeatureCard
     - title: FeedbackDialog
@@ -82,3 +88,9 @@
       path: /components/Title
     - title: Video
       path: /components/Video
+- title: Microeconomics
+  pages:
+    - title: TUT-MIK-I – Mathematische Grundlagen
+      path: /microeconomics/tut-mik-i
+    - title: TUT-MIK-IV – Konsumentscheidung
+      path: /microeconomics/tut-mik-iv

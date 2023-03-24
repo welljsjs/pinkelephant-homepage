@@ -1,0 +1,205 @@
+---
+title: TUT-MIK-IV – Konsumentscheidung
+description: Konsumentscheidung, Allgemeiner Fall (inneres Optimum), Konkretes Optimum für Cobb-Douglas-Präferenzen
+---
+
+# TUT-MIK-IV – Konsumentscheidung
+
+## Konsumentscheidung
+
+(Varian Kapitel 5)
+
+> ...Konsumenten wählen **_das beste Güterbündel_**, das sie sich **_leisten können_**.
+
+Nach Betrachtung der Budgetbeschränkung und der Präferenzen können wir nun sagen, dass
+
+> “die Konsumentinnen aus der **Budgetmenge** das **bevorzugte** Bündel auswählen”.
+
+### Allgemeiner Fall (inneres Optimum)
+
+Wir kennen die Budgetbeschränkung und die Präferenzen bzw. das Nutzenkonzept und möchten den Nutzen bei gegebenem Budget maximieren. Wir können mathematisch ein Optimierungsproblem aufstellen:
+
+$$
+\begin{equation}
+\max_{x_1,x_2}{u(x_1,x_2)}\quad \text{ s.t. } \quad p_1x_1+p_2x_2 \leq m
+\end{equation}
+$$
+
+Zur Lösung dieses Problems treffen wir ein paar weitere einschränkende Annahmen:
+
+- Die Nutzenfunktion ist differenzierbar (und weißt keine Ecken auf)
+- Die Präferenzen sind monoton und konvex
+- es gibt ein inneres Optimum, d.h. $x_i \gt 0$
+
+Umformen der Budgetgleichung ergibt:
+
+$$
+\begin{equation}
+x_2(x_1)=\frac{m}{p_2}-\frac{p_1}{p_2}
+x_1\end{equation}
+$$
+
+Substitution in das Maximierungsproblem davon ergibt:
+
+$$
+\begin{equation}
+\max_{x_1}u(x_1,\frac{m}{p_2}-\frac{p_1}{p_2}x_1)
+\end{equation}
+$$
+
+Dieses Maximierungsproblem ist durch Differenzierung nach $x_1$ lösbar:
+
+$$
+\begin{equation}
+\frac{du(x_1, x_2(x_1))}{dx_1}=
+\frac{\partial u(x_1, x_2(x_1))}{\partial x_1}\cancel{\frac{dx_1}{dx_1}}+\frac{\partial u(x_1, x_2(x_1))}{\partial x_2}\frac{dx_2}{dx_1}=0.
+\end{equation}
+$$
+
+Durch eine Erhöhung von $x_1$ wird der Nutzen gesteigert (linke Seite); die rechte Seite besteht aus dem Anstieg des Nutzens bei einer Erhöhung von $x_2$, multipliziert mit $dx_2/dx_1$, was der Steigung der Budgetgeraden entspricht: $dx_2/dx_1=-p_1/p_2$.
+
+Ersetzen und Umformen ergibt:
+
+$$
+\begin{equation}
+\frac{\partial u(x_1, x_2(x_1))/\partial x_1}{\partial u(x_1, x_2(x_1))/\partial x_2}=\frac{p_1}{p_2}
+\end{equation}
+$$
+
+Also entspricht im inneren Optimum die GRS dem Preisverhältnis, d.h. die Budgetgerade tangiert die Indifferenzkurve im nutzenmaximierenden Optimum.
+
+Dies entspricht der **allgemeinen Lösung** zur Nutzenmaximierung unter der Budgetbeschränkung bei **monotonen und konvexen Präferenzen** mit einem **inneren Optimum**.
+
+### Konkretes Optimum für Cobb-Douglas-Präferenzen
+
+Für konkrete Nutzenfunktionen von Cobb-Douglas-Präferenzen in der allgemeinen Form $u(x_1, x_2)=c\ln{x_1}+d\ln{x_2}$ kann dieses Problem ebenfalls durch Differenzierung gelöst werden und so ein optimales Güterbündel bestimmt werden:
+
+$$
+\begin{equation}
+\max_{x_1, x_2}c\ln{x_1}+d\ln{x_2} \quad \text{ s.t. } \quad p_1x_1+p_2x_2 = m
+\end{equation}
+$$
+
+Nun können wir einfach unsere gerade ermittelte Bedingung, die GRS entspricht im inneren Optimum dem Preisverhältnis, wiederverwenden:
+
+$$
+\begin{equation}
+|MRS|=|-\frac{p_1}{p_2}| \quad \text{ s.t. } \quad p_1x_1+p_2x_2=m
+\end{equation}
+$$
+
+Die GRS/MRS von Cobb-Douglas-Nutzenfunktionen erhalten wir wie folgt (entlang einer Indifferenzkurve ist der Nutzen konstant, also die Änderung des Nutzens null):
+
+$$
+\begin{equation}
+\mathrm{d}u=\frac{c}{x_1}\mathrm{d}x_1+\frac{d}{x_2}\mathrm{d}x_2=0
+\end{equation}
+$$
+
+$$
+\begin{equation}
+\implies \frac{\mathrm{d}x_2}{\mathrm{d}x_1}=-\frac{c}{d}\frac{x_2}{x_1}=MRS
+\end{equation}
+$$
+
+Die ermittelte GRS aus Gleichung $(9)$ können wir in unsere Bedingung aus Gleichung $(7)$ einsetzen:
+
+$$
+\begin{equation}
+\frac{cx_2}{dx_1}=\frac{p_1}{p_2}
+\end{equation}
+$$
+
+Für $x_2$ ersetzen wir mit unserer umgeformten Budgetgleichung:
+
+$$
+\begin{align}
+\frac{c(m/p_2-x_1p_1/p_2)}{dx_1} &= \frac{p_1}{p_2}
+\\
+\implies c(m-x_1p_1) &= p_1dx_1
+\\
+\implies cm &= (c+d)p_1x_1
+\\
+\implies \frac{c}{(c+d)}\frac{m}{p_1} &= x_1.
+\end{align}
+$$
+
+Hier kann man bereits eine interessante und sehr nützliche Eigenschaft von Cobb-Douglas-Präferenzen feststellen: **Cobb-Douglas-Präferenzen** haben **konstante Einkommensanteile an Ausgaben**.
+
+Wenn $p_1x_1$ das gesamte Geld ist, was die Konsumentin für Gut 1 ausgibt, dann entspricht dies einem Anteil von $p_1x_1/m$ am Einkommen. Ersetzen wir $x_1$ durch unsere gerade gewonnene, nutzenmaximierende Menge:
+
+$$
+\begin{equation}
+\frac{p_1}{m}\frac{c}{(c+d)}\frac{m}{p_1}=\frac{c}{c+d}.
+\end{equation}
+$$
+
+Also ist der Anteil am Einkommen, den die Konsumentin für ein Gut 1 ausgibt, konstant, also unabhängig von den Preisen und ihrem Einkommen.
+
+Setzen wir $x_1$ in unsere Budgetgleichung, um die optimale Menge für $x_2$ zu erhalten:
+
+$$
+\begin{equation}
+x_2=\frac{m}{p_2}-\frac{c}{c+d}\frac{m}{p_1}\frac{p_1}{p_2}=\frac{(c+d)m}{(c+d)p_2}-\frac{cm}{(c+d)p_2}=\frac{d}{(c+d)}\frac{m}{p_2}.
+\end{equation}
+$$
+
+Auch hier ergibt sich trivialerweise wieder ein konstanter Einkommensanteil an Ausgaben.
+
+### Bevorzugung einer Einkommensteuer gegenüber einer Mengen-/Wertsteuer
+
+Angenommen, die ursprüngliche Budgetbeschränkung ist wie gewohnt $p_1x_1+p_2x_2=m$.
+
+Wir wollen zeigen, dass eine Einkommensteuer generell gegenüber einer Mengen-/Wertsteuer bevorzugt wird, obwohl die Steuereinnahmen in beiden Fällen gleich sind.
+
+Sei $B=\{ q \in \mathbb{R}^n_+|p'q \leq m \}$ eine Budgetmenge einer Konsumentin (also kann die Konsumentin alle Bündel aus $B$ kaufen bzw. auswählen).
+
+Sei $q^*$ ein optimales Bündel aus $B$, d.h. ein Bündel, das den Nutzen maximiert. Dann muss für jedes andere Bündel $q \in B$ gelten, dass $u(q^*) \geq u(q)$.
+
+Wir können zeigen, dass eine Einkommensteuer immer einer Mengen-/Wertsteuer vorgezogen wird, wenn wir einen Widerspruch haben würden, der besagt, dass $q \in B$ und $u(q) \gt u(q^*)$, denn dann würde dies der Annahme widersprechen, dass $q^*$ ein optimales Bündel in $B$ ist.
+
+Angenommen, wir haben eine Budgetmenge $B^1$ mit einer Pauschalsteuer (Einkommensteuer) in der Höhe $R$:
+
+$$
+B^1=\{q \in \mathbb{R}_+^n | p'q \leq m-R\}.
+$$
+
+Wir haben eine zweite Budgetmenge $B^2$ mit einer Ad-Valorem-Steuer $t$ für ein Gut $i$:
+
+$$
+B^2=\{q \in \mathbb{R}^n_+|p'q+tq_i \leq m\}.
+$$
+
+Zu den Preisen wird einfach die Steuer für das eine Gut addiert.
+
+Sei $q^1$ ein optimales, nutzenmaximierendes Bündel in $B^1$ und sei $q^2$ ein optimales, nutzenmaximierendes Bündel in $B^2$.
+
+Wir nehmen außerdem an, dass der Steuerertrag der Wertsteuer gleich der Einkommensteuer entspricht:
+
+$$
+tq^2_i=R.
+$$
+
+Wir möchten zeigen, dass $u(q^1) \geq u(q^2)$, sodass die Einkommensteuer immer mindestens so viel Nutzen wie die Wertsteuer verspricht.
+
+Es reicht, zu zeigen, dass $q^2 \in B^1$, da dies bedeutet, dass $q^2$ bereits eine mögliche Option war, als $q^1$ als optimales Bündel gewählt wurde.
+
+$$
+\begin{align}
+q^2 \in B^2
+\\
+\iff p'q^2+tq^2_i \leq m
+\\
+\iff p'q^2 \leq m-tq^2_i
+\\
+\iff p'q^2 \leq m-R.
+\end{align}
+$$
+
+Damit ist $q^2 \in B^1$ (und war damit bereits eine mögliche Option, als $q^1$ gewählt wurde).
+
+Dies gilt nicht ausschließlich für Cobb-Douglas-Nutzenfunktionen; wir haben dahingehend keine Einschränkungen getroffen.
+
+<!-- ![Grafische Lösung zur Bevorzugung einer Einkommensteuer ggü. einer Mengensteuer aus H. Varian, S. 94](TUT-MIK-IV%20%E2%80%93%20Konsumentscheidung%200c66b89e5efa4566905475584faf1682/Untitled.png) -->
+
+Grafische Lösung zur Bevorzugung einer Einkommensteuer ggü. einer Mengensteuer aus H. Varian, S. 94

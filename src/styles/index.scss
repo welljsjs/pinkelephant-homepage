@@ -1,1 +1,18 @@
 // This is where your application styles could go.
+main {
+  overflow: auto;
+}
+
+
+// Give math same style as paragraph, shall not overflow - responsive by default
+.math-display .katex-display {
+  // 8 col
+  @include breakpoint('md') {
+    width: 75%;
+  }
+
+  // 8 col
+  @include breakpoint('lg') {
+    width: 66.667%;
+  }
+}
